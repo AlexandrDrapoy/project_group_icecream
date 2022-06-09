@@ -2,7 +2,11 @@
   --header-color: #d41443;
   --accent-btn: #c7133e;
   --secondary-accent-btn: #ecebeb;
+  --header-bg-color: #ffb8ca;
   --main-color: #ffa5ba;
   --primary-text: #000000;
   --secondary-text: #907e82;
+  --basic-white: #ffffff;
 }
+
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
