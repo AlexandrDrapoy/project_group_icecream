@@ -1,0 +1,27 @@
+.mob-menu {
+  position: absolute;
+  padding: 58px 34px;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  width: 14px;
+  height: 14px;
+}
+.close-btn__icon {
+}
+.mob-menu__btn {
+  height: 44px;
+  margin-bottom: 33px;
+  padding-left: 43px;
+  padding-right: 43px;
+  border-radius: 22px;
+}
+.mob-menu__list {
+}
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 23px;
+}
+.mob-menu__link {
+}
