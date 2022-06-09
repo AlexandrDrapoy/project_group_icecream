@@ -1,22 +1,54 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+:root {
+  --header-color: #d41443;
+  --accent-btn: #c7133e;
+  --secondary-accent-btn: #ecebeb;
+  --main-color: #ffa5ba;
+  --primary-text: #000000;
+  --secondary-text: #907e82;
+}
+
 .footer {
   background-color: #fff5f6;
 }
 
 .container {
-  //  width: 100%;
   width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  // @media screen and (min-width: 480px) {
-  //   max-width: 480px;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   max-width: 768px;
-  // }
-  // @media screen and (min-width: 1200px) {
-  //   max-width: 1200px;
-  // }
 }
 
 .footer-btn {
@@ -24,7 +56,7 @@
 }
 
 .footer-locations__open-btn {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -32,12 +64,11 @@
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #ffffff;
 }
 
 .footer-franchise__open-btn {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -45,32 +76,29 @@
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #d41443;
 }
 
 .footer__small-title {
-  font-family: 'Titan One';
+  font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
-
   color: #ffa5ba;
   margin-bottom: 16px;
   text-align: left;
 }
 
 .footer__big-title {
-  font-family: 'Titan One';
+  font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
   font-size: 34px;
   line-height: 39px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
   color: #d41443;
   text-align: left;
 }
@@ -80,50 +108,38 @@
   justify-content: right;
   margin-top: 40px;
   margin-bottom: 40px;
-  &:hover .soc-list__icon,
-  &:focus .soc-list__icon {
-    fill: #fea5bb;
-  }
 }
+.soc-list:hover .soc-list__icon, .soc-list:focus .soc-list__icon {
+  fill: #fea5bb;
+}
+
 .soc-list__item:not(:last-child) {
   margin-right: 30px;
 }
-
-// .soc-list__link {
-//   width: 32px;
-//   height: 32px;
-//   background-color: #fff;
-//   border-radius: 50%;
-//   display: block;
-// }
 
 .footer__contact-tel {
   margin-bottom: 40px;
 }
 
 .soc-list__icon .footer__contact-text {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   text-align: right;
-
   color: #000000;
 }
 
 .contact-tel__link {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   text-align: right;
-
   color: #000000;
-
-  &:hover,
-  &:focus {
-    color: #d41443;
-  }
+}
+.contact-tel__link:hover, .contact-tel__link:focus {
+  color: #d41443;
 }
 
 .footer-bottom {
@@ -131,7 +147,7 @@
 }
 
 .footer-legal--text {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -140,4 +156,4 @@
   text-align: center;
   margin-top: 16px;
   margin-bottom: 20px;
-}
+}/*# sourceMappingURL=index.css.map */
