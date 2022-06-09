@@ -35,6 +35,11 @@
             <p class="customer__name">Emily, Los Angeles</p>
         </div>
     </div>
+    <div class="imagesnew_dotted">
+        <img class="active" src="./images/customer-rewiews/frame-home.svg" width="12">
+        <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
+        <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
+    </div>
 </section>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -48,11 +53,18 @@
         adaptiveHeight: true
     });
 </script> -->
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('.one-time').slick({
             dots: true,
             dotsClass: "my-dots",
         });
     });
+</script> -->
+<script>
+     $('.imagesnew_dotted').slick({
+            slidesToShow: 3,
+            asNavFor: '.images',
+            focusOnSelect: true,
+        });
 </script>
