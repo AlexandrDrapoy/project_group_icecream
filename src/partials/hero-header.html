@@ -1,0 +1,93 @@
+<header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <a class="logo" href="./"
+        ><img
+          srcset="
+            ./images/mobile/header/logo.png    1x,
+            ./images/mobile/header/logo@2x.png 2x
+          "
+          alt="Site logo"
+          width="199"
+          height="50"
+      /></a>
+
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="">Home</a></li>
+        <li class="menu__item">
+          <a class="menu__link" href="">About us</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">How it's made?</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Our products</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="">Contact</a>
+        </li>
+      </ul>
+      <button class="burger" type="button">
+        <!-- ПРОБЛЕМА СО ВСТАВКОЙ SVG. СТРАНИЦА НЕ ПАРСИТСЯ, ЕСЛИ ПУТЬ УКАЗАН ЧЕРЕЗ ДВЕ ТОЧКИ ../ -->
+      </button>
+      <button class="nav__button" type="button">Buy now</button>
+    </nav>
+    <div class="header__wrapper">
+      <h1 class="header__title">
+        <span class="header__title header__title--alt"
+          >ice cream made with</span
+        >
+        passion
+      </h1>
+      <a class="button" href="./">Products</a>
+      <a class="button button--pale" href="./">How it's made?</a>
+    </div>
+
+    <div class="hero-circle"></div>
+    <img
+      class="hero-image"
+      srcset="
+        ./images/mobile/header/hero-icecream.png    1x,
+        ./images/mobile/header/hero-icecream@2x.png 2x
+      "
+      alt="Giant icecream with 5 toppings"
+    />
+
+    <ul class="estate">
+      <li class="estate__item">
+        <p class="estate__number">16</p>
+        <p class="estate__type">cafes</p>
+      </li>
+      <li class="estate__item">
+        <p class="estate__number">23</p>
+        <p class="estate__type">food trucks</p>
+      </li>
+    </ul>
+
+    <div class="milk-wrapper">
+      <img
+        class="milk-wrapper__img"
+        srcset="
+          ./images/mobile/header/milk-jug.png    1x,
+          ./images/mobile/header/milk-jug@2x.png 2x
+        "
+        alt="Milk jug"
+      />
+      <div class="overlay-wrapper">
+        <p class="milk-wrapper__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <button class="arrow-btn" type="button">&#x02192;</button>
+      </div>
+    </div>
+    <img
+      class="girl-img"
+      srcset="
+        ./images/mobile/header/girl.png    1x,
+        ./images/mobile/header/girl@2x.png 2x
+      "
+      alt="girl eating ice-cream"
+    />
+  </div>
+</header>
