@@ -16,18 +16,16 @@
 }
 
 .customer__reviews{
+    position: relative;
     text-align: center;
 }
 
-.customer__reviews{
-    position: relative;
-}
-
 .customer__reviews::before{
-    content: url('../images/customer-rewiews/quotes.png');
+    content: url('../images/mobile/customer-reviews/quotes.png');
     position: absolute;
     top: 147px;
     left: 53px;
+    z-index: 1;
 }
 
 .customer__img{
@@ -39,13 +37,24 @@
     }
 }
 
-.customer__text{
+.slick-slide.slick-current .customer__text--bg{
+    position: absolute;
     background-color: var(--secondary-bg-color);
+    width: 280px;
+    height: 308px;
+    top: 120px;
+    left: 50%;
+    margin-left: -140px;
+}
+
+.customer__text{
+    position: relative;
     @media screen and (min-width: 320px) {
         padding: 43px 58px 26px 65px;
         font-size: 12px;
         line-height: 2.55;
         margin-bottom: 36px;
+        z-index: 2;
     }
 }
 
@@ -111,73 +120,10 @@
     line-height: 1.86;
 }
 
-/* Слайдер */
-.slick-slider {}
-
-/* Слайдер запущен */
-.slick-slider.slick-initialized {}
-
-/* Слайдер с точками */
-.slick-slider.slick-dotted {}
-
-/* Ограничивающая оболочка */
-.slick-list {
-    
-}
-
 /* Лента слайдов */
 .slick-track {
     display: flex;
 }
-
-/* Слайд */
-.slick-slide {}
-
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {}
-
-/* Слайд основной */
-.slick-slide.slick-current {}
-
-/* Слайд по центру */
-.slick-slide.slick-center {}
-
-/* Клонированный слайд */
-.slick-slide.slick-cloned {}
-
-/* Стрелка */
-.slick-arrow {
-}
-
-/* Стрелка влево */
-.slick-arrow.slick-prev {}
-
-/* Стрелка вправо */
-.slick-arrow.slick-next {}
-
-/* Стрелка не активная */
-.slick-arrow.slick-disabled {}
-
-/* Точки (булиты) */
-.slick-dots {}
-
-.slick-dots li {}
-
-/* Активная точка */
-// .slick-dots li.slick-active {
-//     background-color: transparent;
-//     border: 1px solid var(--dots-color);
-// }
-
-/* Элемент точки */
-// .slick-dots li button {
-//     font-size: 0;
-//     width: 12px;
-//     height: 12px;
-//     background-color: var(--dots-color);
-//     border-radius: 50%;
-//     border: none;
-// }
 
     .slick-dots {
         @include centerFlex;
@@ -194,33 +140,15 @@
         width: 12px;
         height: 12px;
         border: none;
+        background-color: var(--dots-color);
+        border-radius: 50%;
+        color: transparent;
     }
-    
-    // .slick-dots li {
-    //     text-align: center;
-    //     list-style: none;
-        
-    //     width: 12px;
-    //     height: 12px;
-    //     background-color: var(--dots-color);
-    //     border-radius: 50%;
-    //     border: none;
-    // }
 
-    .slick-dots li.slick-active button {
+    .slick-dots li.slick-active button{
+        background: transparent;
+        background-image: url('../images/mobile/customer-reviews/home.png');
+        background-size: 12px;
+        background-repeat: no-repeat;
+        border-radius: 0;
     }
-    
-    // .slick-dots li.slick-active button::before {
-    //     content: url('../images/customer-rewiews/home.png');
-    //     width: 12px;
-    //     height: 12px;
-    // }
-    
-    // .slick-dots li button {
-    //     font-size: 0;
-    //     width: 12px;
-    //     height: 12px;
-    //     background-color: var(--dots-color);
-    //     border-radius: 50%;
-    //     border: none;
-    // }
