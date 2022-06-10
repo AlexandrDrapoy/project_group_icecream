@@ -1,6 +1,6 @@
 <section class="customer">
     <h2 class="customer__title">Customer Reviews</h2>
-    <div class="one-time">
+    <div class="customer__slider">
         <div class="customer__reviews">
             <picture class="customer__picture">
                 <source srcset="./images/customer-rewiews/testimonials1.png 1x, 
@@ -16,7 +16,7 @@
             <picture class="customer__picture">
                 <source srcset="./images/customer-rewiews/testimonials2.png 1x, 
                                 ./images/customer-rewiews/testimonials2@2x.png 2x" />
-                <img class="reviews__img" src="./images/customer-rewiews/testimonials2@2x.png" alt="Portrait">
+                <img class="customer__img" src="./images/customer-rewiews/testimonials2@2x.png" alt="Portrait">
             </picture>
             <p class="customer__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
                 nunc, accumsan
@@ -27,7 +27,7 @@
             <picture class="customer__picture">
                 <source srcset="./images/customer-rewiews/testimonials3.png 1x, 
                                 ./images/customer-rewiews/testimonials3@2x.png 2x" />
-                <img class="reviews__img" src="./images/customer-rewiews/testimonials3@2x.png" alt="Portrait">
+                <img class="customer__img" src="./images/customer-rewiews/testimonials3@2x.png" alt="Portrait">
             </picture>
             <p class="customer__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
                 nunc, accumsan
@@ -35,36 +35,37 @@
             <p class="customer__name">Emily, Los Angeles</p>
         </div>
     </div>
-    <div class="imagesnew_dotted">
+    <!-- <div class="imagesnew_dotted">
         <img class="active" src="./images/customer-rewiews/frame-home.svg" width="12">
         <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
         <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
-    </div>
+    </div> -->
 </section>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script type="text/javascript">
-    $('.one-time').slick({
+<!-- <script type="text/javascript">
+    $('.customer__slider').slick({
         dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         adaptiveHeight: true
     });
-</script> -->
-<!-- <script>
+</script> --> -->
+<script>
     $(document).ready(function () {
-        $('.one-time').slick({
+        $('.customer__slider').slick({
+            arrows: false,
             dots: true,
-            dotsClass: "my-dots",
+            // dotsClass: "my-dots",
         });
     });
-</script> -->
-<script>
+</script>
+<!-- <script>
      $('.imagesnew_dotted').slick({
             slidesToShow: 3,
             asNavFor: '.images',
             focusOnSelect: true,
         });
-</script>
+</script> -->
