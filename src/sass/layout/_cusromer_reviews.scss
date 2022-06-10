@@ -8,6 +8,7 @@
         padding: 80px 20px 48px;
     }
     @include tablet {
+        padding: 80px 74px;
         width: 768px;
     }
     @include desktop {
@@ -23,58 +24,98 @@
 .customer__reviews::before{
     content: url('../images/mobile/customer-reviews/quotes.png');
     position: absolute;
-    top: 147px;
-    left: 53px;
     z-index: 1;
+    @include mobile {
+        top: 147px;
+        left: 53px;
+    }
+    @include tablet {
+        top: 124px;
+        left: 6px;
+        width: 60.35px;
+        height: 40px;
+    }
 }
 
 .customer__img{
     width: 85px;
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-width: 320px) {
+    @include mobile {
         margin-bottom: 32px;
+    }
+    @include tablet {
+        margin-bottom: 20px;
     }
 }
 
 .slick-slide.slick-current .customer__text--bg{
     position: absolute;
     background-color: var(--secondary-bg-color);
-    width: 280px;
-    height: 308px;
-    top: 120px;
-    left: 50%;
-    margin-left: -140px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include mobile {
+        width: 280px;
+        height: 308px;
+        top: 120px;
+    }
+    @include tablet {
+        width: 620px;
+        height: 164px;
+        top: 105px;
+    }
 }
 
 .customer__text{
     position: relative;
-    @media screen and (min-width: 320px) {
+    z-index: 2;
+    
+    @include mobile {
         padding: 43px 58px 26px 65px;
         font-size: 12px;
         line-height: 2.55;
         margin-bottom: 36px;
-        z-index: 2;
+    }
+    @include tablet {
+        padding: 37px 55px 44px 51px;
+        font-size: 14px;
+        line-height: 2.16;
+        letter-spacing: 0.04em;
+        margin-bottom: 24px;
     }
 }
 
 .customer__gradient{
     position: absolute;
-    left: 70px;
-    bottom: 160px;
-    width: 180px;
-    height: 250px;
     z-index: 1;
     background: repeating-linear-gradient(transparent, transparent 30px, #E1E1E1 1px, #E1E1E1 31px);
+    @include mobile {
+        left: 70px;
+        bottom: 155px;
+        width: 180px;
+        height: 250px;
+    }
+    @include tablet {
+        left: 80px;
+        bottom: 190px;
+        width: 608px;
+        height: 108px;
+    }
 }
 
 .customer__dots--container{
     position: absolute;
     left: 50%;
-    bottom: 120px;
     width: 32px;
     margin-left: -16px;
     margin-right: auto;
+    @include mobile {
+        bottom: 115px;
+    }
+    @include tablet {
+        bottom: 155px;
+    }
 }
 
 .customer__dot {
@@ -115,9 +156,16 @@
 }
 
 .customer__name {
-    margin: 16px auto;
-    font-size: 14px;
     line-height: 1.86;
+
+    @include mobile {
+        margin: 0 auto 11px;
+        font-size: 14px;
+    }
+    @include tablet {
+        margin: 0 auto 16px;
+        font-size: 16px;
+    }
 }
 
 /* Лента слайдов */
@@ -126,12 +174,15 @@
 }
 
     .slick-dots {
-        @include centerFlex;
+        display: flex;
+        width: 72.4px;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .slick-dots li {
         list-style: none;
-        margin: 0 18px;
         width: 12px;
         height: 12px;
     }
@@ -143,6 +194,8 @@
         background-color: var(--dots-color);
         border-radius: 50%;
         color: transparent;
+        font-size: 0;
+        padding: 0;
     }
 
     .slick-dots li.slick-active button{
