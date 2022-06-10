@@ -22,7 +22,7 @@ a {
   padding-right: 20px;
 }
 
-.contact {
+.contacts {
   padding-top: 48px;
   padding-bottom: 48px;
   background-image: linear-gradient(
@@ -47,15 +47,15 @@ a {
   border-radius: 24px;
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
   transition: box-shadow $time-and-cubic;
-}
 
-.card-set__item:hover,
-.card-set__item:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+  &:hover,
+  &focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 
-.card-set__item + .card-set__item {
-  margin-top: 20px;
+  & + & {
+    margin-top: 20px;
+  }
 }
 
 .card-set__agency {
@@ -84,15 +84,16 @@ a {
 .card-set__location {
   margin-bottom: 48px;
   position: relative;
-}
-.card-set__location::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #e1e1e1;
-  bottom: -25px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: -25px;
+  }
 }
 
 .card-set__location-city {
@@ -109,7 +110,18 @@ a {
 .card-set__working {
   margin-bottom: 48px;
   position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    bottom: -25px;
+  }
 }
+
 .card-set__working-weekdays {
   margin-bottom: 8px;
 }
@@ -119,16 +131,6 @@ a {
   color: var(--primary-text);
 }
 
-.card-set__working::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #e1e1e1;
-  bottom: -25px;
-}
-
 .card-set__working-time {
   @include font(1.83, null, 12px);
   color: var(--main-color);
@@ -136,7 +138,7 @@ a {
 
 .card-set__mail,
 .card-set__tel {
-  @include font(1.5, null, 18px);
+  @include font(1.5, null, 12px);
   color: var(--secondary-text);
 }
 
@@ -145,34 +147,37 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.contacts-buttons__locations {
-  cursor: pointer;
-  width: 161px;
-  height: 44px;
-  background: #d41342;
-  border: none;
-  border-radius: 22px;
-  margin-bottom: 10px;
-  @include font(1.31, null, 16px, 700);
-  color: #ffffff;
-}
-.contacts-buttons__franchise {
-  cursor: pointer;
-  width: 161px;
-  height: 44px;
-  border: none;
-  background: #fff;
-  border-radius: 22px;
-  @include font(1.31, null, 16px, 700);
-  color: var(--header-color);
-  transition: background-color $time-and-cubic;
-}
-.contacts-buttons__franchise:hover,
-.contacts-buttons__franchise:focus {
-  background-color: #ecebeb;
-}
 
-.contacts-buttons__arrow {
-  margin-left: 8px;
+  &__locations {
+    cursor: pointer;
+    width: 161px;
+    height: 44px;
+    background: #d41342;
+    border: none;
+    border-radius: 22px;
+    margin-bottom: 10px;
+    @include font(1.31, null, 16px, 700);
+    color: #ffffff;
+  }
+
+  &__franchise {
+    cursor: pointer;
+    width: 161px;
+    height: 44px;
+    border: none;
+    background: #fff;
+    border-radius: 22px;
+    @include font(1.31, null, 16px, 700);
+    color: var(--header-color);
+    transition: background-color $time-and-cubic;
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+
+  &__arrow {
+    margin-left: 8px;
+  }
 }
