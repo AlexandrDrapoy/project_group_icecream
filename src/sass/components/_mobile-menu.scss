@@ -1,7 +1,13 @@
 .mob-menu {
-  position: absolute;
-  padding: 58px 34px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  padding-top: 58px;
+  background-color: #e17992;
 }
+
 .close-btn {
   position: absolute;
   top: 20px;
@@ -12,16 +18,51 @@
 .close-btn__icon {
 }
 .mob-menu__btn {
+  display: block;
   height: 44px;
-  margin-bottom: 33px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 43px;
   padding-right: 43px;
   border-radius: 22px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: var(--header-color);
+  background-color: #fff;
 }
+
+.mob-menu__span {
+  margin-left: 10px;
+}
+
 .mob-menu__list {
+  list-style: none;
 }
-.mob-menu__item:not(:last-child) {
-  margin-bottom: 23px;
+
+.mob-menu__item {
+  padding-left: 20px;
+  border-bottom: 1px solid #e18298;
+  &:first-child {
+    border-top: 1px solid #e18298;
+  }
 }
+
 .mob-menu__link {
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 100%;
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: var(--header-color);
+  }
 }
