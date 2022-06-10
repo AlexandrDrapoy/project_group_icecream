@@ -1,3 +1,9 @@
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
 @mixin centerFlex($type: flex) {
   display: flex;
   justify-content: center;
@@ -31,7 +37,7 @@ $list-section: 'about', 'advantage', 'contact', 'customer-reviews', 'gallery',
   }
 }
 
-@mixin font($lh, $ls, $fs: 16px, $fw: 500) {
+@mixin font_($lh, $ls, $fs: 16px, $fw: 500) {
   line-height: $lh;
   letter-spacing: $ls;
   font-size: $fs;

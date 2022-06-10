@@ -1,0 +1,229 @@
+.customer {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 320px) {
+        width: 320px;
+        padding: 80px 20px 48px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1200px;
+    }
+}
+
+.customer__reviews{
+    text-align: center;
+}
+
+.customer__reviews{
+    position: relative;
+}
+
+.customer__reviews::before{
+    content: url('../images/customer-rewiews/quotes.png');
+    position: absolute;
+    top: 147px;
+    left: 53px;
+}
+
+.customer__img{
+    width: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 320px) {
+        margin-bottom: 32px;
+    }
+}
+
+.customer__text{
+    z-index: 10;
+    background-color: var(--secondary-bg-color);
+    @media screen and (min-width: 320px) {
+        padding: 43px 58px 26px 65px;
+        font-size: 12px;
+        line-height: 2.55;
+        margin-bottom: 36px;
+    }
+}
+
+.customer__gradient{
+    position: absolute;
+    left: 70px;
+    bottom: 160px;
+    width: 180px;
+    height: 250px;
+    z-index: 1;
+    background: repeating-linear-gradient(transparent, transparent 30px, #E1E1E1 1px, #E1E1E1 31px);
+}
+
+.customer__dots--container{
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    width: 32px;
+    margin-left: -16px;
+    margin-right: auto;
+}
+
+.customer__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--accent-btn);
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    font-size: 0;
+
+}
+
+.customer__dot::before {
+    position: absolute;
+    left: -10px;
+    top: 0;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--accent-btn);
+    display: inline-block;
+}
+
+.customer__dot::after{
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--accent-btn);
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.customer__name {
+    margin: 16px auto;
+    font-size: 14px;
+    line-height: 1.86;
+}
+
+/* Слайдер */
+.slick-slider {}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {}
+
+/* Слайд основной */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрелка */
+.slick-arrow {
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {}
+
+/* Точки (булиты) */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активная точка */
+// .slick-dots li.slick-active {
+//     background-color: transparent;
+//     border: 1px solid var(--dots-color);
+// }
+
+/* Элемент точки */
+// .slick-dots li button {
+//     font-size: 0;
+//     width: 12px;
+//     height: 12px;
+//     background-color: var(--dots-color);
+//     border-radius: 50%;
+//     border: none;
+// }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .slick-dots li {
+        list-style: none;
+        margin: 0 18px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .slick-dots li button{
+        width: 12px;
+        height: 12px;
+        border: none;
+    }
+    
+    // .slick-dots li {
+    //     text-align: center;
+    //     list-style: none;
+        
+    //     width: 12px;
+    //     height: 12px;
+    //     background-color: var(--dots-color);
+    //     border-radius: 50%;
+    //     border: none;
+    // }
+
+    .slick-dots li.slick-active button {
+    }
+    
+    // .slick-dots li.slick-active button::before {
+    //     content: url('../images/customer-rewiews/home.png');
+    //     width: 12px;
+    //     height: 12px;
+    // }
+    
+    // .slick-dots li button {
+    //     font-size: 0;
+    //     width: 12px;
+    //     height: 12px;
+    //     background-color: var(--dots-color);
+    //     border-radius: 50%;
+    //     border: none;
+    // }
