@@ -1,3 +1,61 @@
-.grip1 {
-  max-width: 380px;
+// .container {
+//   @include container;
+// }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.grid-container {
+  display: grid;
+  gap: 4px;
+}
+.gallery {
+  height: 122px;
+  max-width: 1200px;
+
+  //   &__grig {
+  //   }
+
+  &__item-1 {
+    grid-column: 1;
+    grid-row: 4 / span 3;
+  }
+  &__item-2 {
+    grid-column: 2;
+    grid-row: 3 / span 3;
+  }
+  &__item-3 {
+    grid-column: 2;
+    grid-row: 6 / span 3;
+  }
+  &__item-4 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+  }
+  &__item-5 {
+    grid-column: 3;
+    grid-row: 7 / span 3;
+  }
+  &__item-6 {
+    grid-column: 5;
+    grid-row: 3 / span 3;
+  }
+  &__item-7 {
+    grid-column: 5;
+    grid-row: 6 / span 3;
+  }
+  &__item-8 {
+    grid-column: 6;
+    grid-row: 2 / span 3;
+  }
+  &__item-9 {
+    grid-column: 6;
+    grid-row: 5 / span 3;
+  }
+  &__item-10 {
+    grid-column: 7;
+    grid-row: 4 / span 3;
+  }
 }
