@@ -1,6 +1,8 @@
 .products {
   width: 320px;
   background-color: fffff;
+  padding-top: 80px;
+  padding-bottom: 40px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -38,6 +40,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  position: relative;
 }
 
 .products__item-name {
@@ -62,11 +65,77 @@
   color: #ffffff;
 }
 
-.products-about {
+// .products-about {
+//   position: relative;
+//   width: 280px;
+//   height: 469px;
+//   margin-top: 140px;
+//   border-radius: 24px;
+//   background-color: var(--main-color);
+// }
+
+.products__about-cream {
   width: 280px;
   height: 469px;
+  margin-top: 140px;
   border-radius: 24px;
+
   background-color: var(--main-color);
+}
+
+.products__about-cream::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 0;
+  left: 0;
+
+  background-image: url(../images/mobile/products/home-pic1-mob.png);
+
+  transform: translateY(-50%);
+}
+
+.products__about-coffee {
+  width: 280px;
+  height: 469px;
+  margin-top: 140px;
+  border-radius: 24px;
+
+  background-color: var(--background-coffee-color);
+}
+
+.products__about-coffee::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 0;
+  left: 0;
+  background-image: url(../images/mobile/products/home-pic2-mob.png);
+
+  transform: translateY(-50%);
+}
+
+.products__about-shakes {
+  width: 280px;
+  height: 469px;
+  margin-top: 140px;
+  border-radius: 24px;
+
+  background-color: var(--background-shakes-color);
+}
+
+.products__about-shakes::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  // top: 0;
+  left: 0;
+  background-image: url(../images/mobile/products/home-pic3-mob.png);
+
+  transform: translateY(-50%);
 }
 
 .arrow {
