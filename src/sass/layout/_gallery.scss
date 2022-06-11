@@ -1,19 +1,18 @@
-// .container {
-//   @include container;
-// }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
-}
 .grid-container {
   display: grid;
-  gap: 4px;
+  gap: 1.1%;
+  grid-auto-rows: 10%;
 }
 .gallery {
-  height: 122px;
-  max-width: 1200px;
+  //   height: 122px;
+
+  //   @include tablet {
+  //     height: 264px;
+  //   }
+
+  //   @include desktop {
+  //     height: 430px;
+  //   }
 
   //   &__grig {
   //   }

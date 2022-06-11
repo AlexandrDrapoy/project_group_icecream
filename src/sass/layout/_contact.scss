@@ -114,7 +114,7 @@
 }
 
 .card-set__working-time {
-  @include font(1.83, null, 12px);
+  @include font_(1.83, null, 12px);
   color: var(--main-color);
 }
 
