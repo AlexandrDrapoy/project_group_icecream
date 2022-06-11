@@ -1,10 +1,16 @@
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
 @mixin centerFlex($type: flex) {
-  display: flex;
+  display: $type;
   justify-content: center;
   align-items: center;
 }
 
-@mixin hoverFocusColor($color: $activ-color) {
+@mixin hoverFocusColor($color) {
   &:hover,
   &:focus {
     color: $color;
@@ -24,14 +30,14 @@ $list-section: 'about', 'advantage', 'contact', 'customer-reviews', 'gallery',
   .#{$elem} {
     padding-top: 40px;
     padding-bottom: 40px;
-    // @media screen and (min-width: 1200px) {
-    //   padding-top: 40px;
-    //   padding-bottom: 40px;
-    // }
+    @media screen and (min-width: 1200px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
 }
 
-@mixin font($lh, $ls, $fs: 16px, $fw: 500) {
+@mixin font_($lh, $ls, $fs: 16px, $fw: 500) {
   line-height: $lh;
   letter-spacing: $ls;
   font-size: $fs;

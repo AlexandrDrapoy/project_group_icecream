@@ -1,0 +1,126 @@
+.hidden {
+  display: none;
+}
+
+.advantages {
+  background-color: #fff5f6;
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      width: 527px;
+    }
+  }
+  &__item {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 230px;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__title::before {
+    content: '';
+
+    display: block;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+
+  &__title {
+    &--icon1::before {
+      background-image: url(../images/mobile/advantages/advantages1.png);
+      width: 33px;
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--icon2::before {
+      background-image: url(../images/mobile/advantages/advantages2.png);
+      width: 50px;
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--icon3::before {
+      background-image: url(../images/mobile/advantages/advantages3.png);
+      width: 44px;
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    font-family: 'Titan One', cursive;
+    font-weight: 400;
+    line-height: 1.145;
+    letter-spacing: 0.04;
+
+    color: var(--header-color);
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      margin-bottom: 16px;
+
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 13px;
+
+      font-size: 48px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 16px;
+
+      font-size: 58px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+}
