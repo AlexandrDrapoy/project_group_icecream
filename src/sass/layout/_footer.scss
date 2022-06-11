@@ -5,12 +5,12 @@
 <<<<<<< HEAD
 .container {
   max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 
   @include mobile {
     max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   @include tablet {
     max-width: 768px;
@@ -164,7 +164,6 @@
   // @media screen and (min-width: 1200px) {
   //   // display: inline;
 
-  //   // padding-bottom: 60px;
   // }
 }
 
