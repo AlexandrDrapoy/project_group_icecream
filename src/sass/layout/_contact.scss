@@ -1,11 +1,40 @@
 .container--contacts {
-  @include tablet;
-  padding-left: 18px;
-  padding-right: 18px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // @include mobile;
+  // padding-left: 16px;
+  // padding-right: 16px;
+
+  // @include tablet;
+  // padding-left: 18px;
+  // padding-right: 18px;
+
+  // @include desktop;
+  // padding-left: 20px;
+  // padding-right: 20px;
 }
 
 .contacts {
-  padding-top: 48px;
+  padding-top: 24px;
   padding-bottom: 48px;
   background-image: linear-gradient(
     to bottom,
@@ -13,22 +42,29 @@
     #fffbfd 26%,
     #fff5f6 26%
   );
-}
 
-.hidden-title {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  margin: -1px;
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
 }
 
 .card-set__item {
-  background-color: #fff;
+  background-color: var(--basic-white);
   padding: 40px 32px;
   border-radius: 24px;
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
   transition: box-shadow $transition;
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
 
   &:hover,
   &focus {
@@ -36,31 +72,49 @@
   }
 
   & + & {
-    margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
   }
 }
-
+.card-set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
 .card-set__agency {
   @include centerFlex;
   @include font_(1.83, 0.04em, 12px);
-  color: #fff;
+  color: var(--basic-white);
   width: 80px;
   height: 16px;
   border-radius: 4px;
   background-color: #f0d1a5;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 73px;
+    height: 28px;
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 .card-set__agency-color {
   @include centerFlex;
   @include font_(1.83, 0.04em, 12px);
-  color: #fff;
+  color: var(--basic-white);
   width: 130px;
   height: 16px;
   border-radius: 4px;
   background-color: #c2e297;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 138px;
+    height: 28px;
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 
 .card-set__location {
@@ -82,11 +136,19 @@
   margin-bottom: 8px;
   @include font_(1.83, 0.04em, 12px);
   color: var(--primary-text);
+
+  @media screen and (min-width: 768px) {
+    @include font_(1.86, 0.04em, 14px);
+  }
 }
 
 .card-set__text {
   @include font_(1.5, null, 12px);
   color: var(--secondary-text);
+
+  @media screen and (min-width: 768px) {
+    @include font_(1.64, null, 14px);
+  }
 }
 
 .card-set__working {
@@ -111,24 +173,42 @@
 .card-set__working-weekdays {
   @include font_(1.83, null, 12px);
   color: var(--primary-text);
+
+  @media screen and (min-width: 768px) {
+    @include font_(1.86, null, 14px);
+  }
 }
 
 .card-set__working-time {
   @include font_(1.83, null, 12px);
   color: var(--main-color);
+
+  @media screen and (min-width: 768px) {
+    @include font_(1.86, null, 14px);
+  }
 }
 
 .card-set__mail,
 .card-set__tel {
   @include font_(1.5, null, 12px);
   color: var(--secondary-text);
+
+  @media screen and (min-width: 768px) {
+    @include font_(1.86, null, 14px);
+  }
 }
 
 .contacts-buttons {
   margin-top: 32px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-top: 40px;
+  }
 
   &__locations {
     cursor: pointer;
@@ -139,7 +219,12 @@
     border-radius: 22px;
     margin-bottom: 10px;
     @include font_(1.31, null, 16px, 700);
-    color: #ffffff;
+    color: var(--basic-white);
+
+    @media screen and (min-width: 768px) {
+      margin-right: 15px;
+      width: 192px;
+    }
   }
 
   &__franchise {
@@ -147,19 +232,26 @@
     width: 161px;
     height: 44px;
     border: none;
-    background: #fff;
+    background: var(--basic-white);
     border-radius: 22px;
     @include font_(1.31, null, 16px, 700);
     color: var(--header-color);
     transition: background-color $transition;
+    @media screen and (min-width: 768px) {
+      width: 174px;
+    }
 
     &:hover,
     &:focus {
-      background-color: #ecebeb;
+      background-color: var(--secondary-accent-btn);
     }
   }
 
   &__arrow {
     margin-left: 8px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 13px;
+    }
   }
 }
