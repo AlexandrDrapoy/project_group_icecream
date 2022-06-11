@@ -1,25 +1,7 @@
-ul {
-  list-style: none;
-}
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-
-  @include mobile;
-  padding-left: 20px;
-  padding-right: 20px;
-
+.container--contacts {
   @include tablet;
   padding-left: 18px;
   padding-right: 18px;
-
-  @include desktop;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .contacts {
@@ -46,7 +28,7 @@ a {
   padding: 40px 32px;
   border-radius: 24px;
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
-  transition: box-shadow $time-and-cubic;
+  transition: box-shadow $transition;
 
   &:hover,
   &focus {
@@ -60,7 +42,7 @@ a {
 
 .card-set__agency {
   @include centerFlex;
-  @include font(1.83, 0.04em, 12px);
+  @include font_(1.83, 0.04em, 12px);
   color: #fff;
   width: 80px;
   height: 16px;
@@ -71,7 +53,7 @@ a {
 }
 .card-set__agency-color {
   @include centerFlex;
-  @include font(1.83, 0.04em, 12px);
+  @include font_(1.83, 0.04em, 12px);
   color: #fff;
   width: 130px;
   height: 16px;
@@ -98,12 +80,12 @@ a {
 
 .card-set__location-city {
   margin-bottom: 8px;
-  @include font(1.83, 0.04em, 12px);
+  @include font_(1.83, 0.04em, 12px);
   color: var(--primary-text);
 }
 
 .card-set__text {
-  @include font(1.5, null, 12px);
+  @include font_(1.5, null, 12px);
   color: var(--secondary-text);
 }
 
@@ -127,7 +109,7 @@ a {
 }
 .card-set__working-weekends,
 .card-set__working-weekdays {
-  @include font(1.83, null, 12px);
+  @include font_(1.83, null, 12px);
   color: var(--primary-text);
 }
 
@@ -138,7 +120,7 @@ a {
 
 .card-set__mail,
 .card-set__tel {
-  @include font(1.5, null, 12px);
+  @include font_(1.5, null, 12px);
   color: var(--secondary-text);
 }
 
@@ -156,7 +138,7 @@ a {
     border: none;
     border-radius: 22px;
     margin-bottom: 10px;
-    @include font(1.31, null, 16px, 700);
+    @include font_(1.31, null, 16px, 700);
     color: #ffffff;
   }
 
@@ -167,9 +149,9 @@ a {
     border: none;
     background: #fff;
     border-radius: 22px;
-    @include font(1.31, null, 16px, 700);
+    @include font_(1.31, null, 16px, 700);
     color: var(--header-color);
-    transition: background-color $time-and-cubic;
+    transition: background-color $transition;
 
     &:hover,
     &:focus {
