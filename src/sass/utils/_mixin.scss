@@ -23,7 +23,7 @@
   }
 }
 
-$list-section: 'about', 'advantage', 'contact', 'customer-reviews', 'gallery',
+$list-section: 'about', 'advantages', 'contact', 'customer-reviews', 'gallery',
   'product';
 
 @each $elem in $list-section {
