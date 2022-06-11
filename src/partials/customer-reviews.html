@@ -1,94 +1,56 @@
 <section class="customer">
-  <div class="container">
     <h2 class="customer__title visually-hidden">Customer Reviews</h2>
     <div class="customer__slider">
-      <div class="customer__reviews">
-        <picture class="customer__picture">
-          <source
-            srcset="
-              ./images/customer-rewiews/testimonials1.png    1x,
-              ./images/customer-rewiews/testimonials1@2x.png 2x
-            "
-          />
-          <img
-            class="customer__img"
-            src="./images/customer-rewiews/testimonials1@2x.png"
-            alt="Portrait"
-          />
-        </picture>
-        <p class="customer__text">
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p class="customer__name">Emily, Los Angeles</p>
-      </div>
-      <div class="customer__reviews">
-        <picture class="customer__picture">
-          <source
-            srcset="
-              ./images/customer-rewiews/testimonials2.png    1x,
-              ./images/customer-rewiews/testimonials2@2x.png 2x
-            "
-          />
-          <img
-            class="customer__img"
-            src="./images/customer-rewiews/testimonials2@2x.png"
-            alt="Portrait"
-          />
-        </picture>
-        <p class="customer__text">
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p class="customer__name">Emily, Los Angeles</p>
-      </div>
-      <div class="customer__reviews">
-        <picture class="customer__picture">
-          <source
-            srcset="
-              ./images/customer-rewiews/testimonials3.png    1x,
-              ./images/customer-rewiews/testimonials3@2x.png 2x
-            "
-          />
-          <img
-            class="customer__img"
-            src="./images/customer-rewiews/testimonials3@2x.png"
-            alt="Portrait"
-          />
-        </picture>
-        <p class="customer__text">
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p class="customer__name">Emily, Los Angeles</p>
-      </div>
+        <div class="customer__reviews">
+            <picture class="customer__picture">
+                <source srcset="./images/mobile/customer-reviews/testimonials1.png 1x, 
+                                ./images/mobile/customer-reviews/testimonials1@2x.png 2x"/>
+                <img class="customer__img" src="./images/mobile/customer-reviews/testimonials1@2x.png" alt="Portrait">
+            </picture>
+            <div class="customer__text--bg"></div>
+            <p class="customer__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
+                nunc, accumsan
+                congue. Lorem ipsum primis in nibh vel risus.</p>
+            <p class="customer__name">Emily, Los Angeles</p>
+        </div>
+        <div class="customer__reviews">
+            <picture class="customer__picture">
+                <source srcset="./images/mobile/customer-reviews/testimonials2.png 1x, 
+                                ./images/mobile/customer-reviews/testimonials2@2x.png 2x" />
+                <img class="customer__img" src="./images/mobile/customer-reviews/testimonials2@2x.png" alt="Portrait">
+            </picture>
+            <div class="customer__text--bg"></div>
+            <p class="customer__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
+                nunc, accumsan
+                congue. Lorem ipsum primis in nibh vel risus.</p>
+            <p class="customer__name">Emily, Los Angeles</p>
+        </div>
+        <div class="customer__reviews">
+            <picture class="customer__picture">
+                <source srcset="./images/mobile/customer-reviews/testimonials3.png 1x, 
+                                ./images/mobile/customer-reviews/testimonials3@2x.png 2x" />
+                <img class="customer__img" src="./images/mobile/customer-reviews/testimonials3@2x.png" alt="Portrait">
+            </picture>
+            <div class="customer__text--bg"></div>
+            <p class="customer__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
+                nunc, accumsan
+                congue. Lorem ipsum primis in nibh vel risus.</p>
+            <p class="customer__name">Emily, Los Angeles</p>
+        </div>
     </div>
     <div class="customer__gradient"></div>
     <div class="customer__dots--container">
-      <span class="customer__dot"></span>
+        <span class="customer__dot"></span>
     </div>
     <!-- <div class="imagesnew_dotted">
         <img class="active" src="./images/customer-rewiews/frame-home.svg" width="12">
         <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
         <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
     </div> -->
-  </div>
 </section>
-<script
-  type="text/javascript"
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-></script>
-<script
-  type="text/javascript"
-  src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-></script>
-<script
-  type="text/javascript"
-  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!-- <script type="text/javascript">
     $('.customer__slider').slick({
         dots: true,
@@ -97,16 +59,15 @@
         slidesToShow: 1,
         adaptiveHeight: true
     });
-</script> -->
--->
+</script> --> -->
 <script>
-  $(document).ready(function () {
-    $('.customer__slider').slick({
-      arrows: false,
-      dots: true,
-      // dotsClass: "my-dots",
+    $(document).ready(function () {
+        $('.customer__slider').slick({
+            arrows: false,
+            dots: true,
+            // dotsClass: "my-dots",
+        });
     });
-  });
 </script>
 <!-- <script>
      $('.imagesnew_dotted').slick({
