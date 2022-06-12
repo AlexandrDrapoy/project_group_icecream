@@ -1,23 +1,23 @@
-.container {
-  @include mobile {
-    padding-top: 20px;
-  }
-
-  @include tablet {
-    padding-top: 40px;
-  }
-
-  @include desktop {
-    padding-top: 30px;
-    padding-bottom: 60px;
-  }
-}
-
 .hidden {
   display: none;
 }
 
 .advantages {
+  &--container {
+    @include mobile {
+      padding-top: 20px;
+    }
+
+    @include tablet {
+      padding-top: 40px;
+    }
+
+    @include desktop {
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+  }
+
   @include mobile {
     padding-top: 0;
   }
@@ -72,6 +72,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
+    cursor: pointer;
+
+    animation: animate110 2500ms infinite 400ms;
+  }
+
+  @keyframes animate110 {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 
   &__title {
