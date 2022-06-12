@@ -14,7 +14,7 @@
     height: 664px;
   }
 }
-.header__container {
+.container.header__container{ 
   padding-top: 0;
 }
 .header__nav {
@@ -50,7 +50,6 @@
 .menu__link {
   @include font(700, 16px, 1.31, null);
   color: var(--basic-white);
-  @include hoverFocusColor(var(--header-color));
 }
 
 .burger {
