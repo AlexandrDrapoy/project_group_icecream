@@ -5,7 +5,7 @@
     background: var(--basic-white);
     @include mobile {
         width: 320px;
-        padding: 40px 20px 48px;
+        padding: 40px 20px 24px;
     }
     @include tablet {
         padding: 40px 74px;
@@ -109,7 +109,7 @@
     z-index: 1;
     @include mobile {
         left: 70px;
-        bottom: 155px;
+        bottom: 130px;
         width: 180px;
         height: 250px;
         background: repeating-linear-gradient(transparent, transparent 30px, #E1E1E1 1px, #E1E1E1 31px);
@@ -137,7 +137,7 @@
     margin-left: -16px;
     margin-right: auto;
     @include mobile {
-        bottom: 115px;
+        bottom: 91px;
     }
     @include tablet {
         bottom: 115px;
