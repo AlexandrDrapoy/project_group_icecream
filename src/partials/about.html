@@ -1,30 +1,46 @@
-<container>
-  <section class="about">
+<section class="about">
+  <div class="container about-container">
     <div class="two-titles">
-      <p class="traditon">tradition and love</p>
+      <p class="tradition">TRADITION AND LOVE</p>
       <h3 class="about-title">HOW IT´S MADE?</h3>
     </div>
-    
-    <ul class="about-list">
-      <li class="about-item">
-        <p class="text">
-          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
-          justo fringilla.
-        </p>
-      </li>
-      <li class="about-item">
-        <p class="midle-text">
-          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-          tincidunt. 
-        </p>
-      </li class="about-item">
-      <li class="about-item">
-        <p class="bottom-text">Aliquam erat volutpat. Aenean accumsan.</p>
-      </li>
-    </ul>
-    <button type="button" class="about-button">Read more ></button>
-  </section>
-</container>
+    <div class="general-box">
+      
+        <picture
+          class="image-cow">
+          <source srcset="
+            ./images/desctop/about/dkow1x.png 1x,
+            ./images/desctop/about/dkow2x.png 2x"
+            media="(min-width: 1200px)"/>
+          <source srcset="
+            ./images/tablet/about/tkow1x.png 1x,
+            ./images/tablet/about/tkow2x.png 2x"
+            media="(min-width: 768px)"/>
+          <source srcset="
+            ./images/mobile/about/mkow1x.png 1x,
+            ./images/mobile/about/mkow2x.png 2x"
+            media="(max-width: 767px)"/>
+          <img src="./images/desctop/about/dkow1x.png" alt="lucky cow"/>
+        </picture>
+
+      <div class="doppel-text">
+        <div class="about-top-text">
+          <p class="text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+            cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+            justo fringilla.
+          </p>
+        </div>
+        <div class="about-list">
+          <p class="middle-text">
+            Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+            Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+            suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+            tincidunt.
+          </p>
+          <p class="bottom-text">Aliquam erat volutpat. Aenean accumsan.</p>
+        </div>
+        <button type="button" class="about-button">Read more ></button>
+      </div>
+    </div>
+  </di>
+</section>
