@@ -2,6 +2,7 @@
   background: #fff5f6;
 }
 
+<<<<<<< HEAD
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -23,6 +24,8 @@
   }
 }
 
+=======
+>>>>>>> main
 .footer__title-wrap {
   text-align: left;
 
@@ -193,6 +196,18 @@
   @include tablet {
     display: flex;
   }
+<<<<<<< HEAD
+=======
+
+  @media screen and (max-width: 1199px) {
+    // padding-bottom: 40px;
+  }
+  // @media screen and (min-width: 1200px) {
+  //   // display: inline;
+
+  //   // padding-bottom: 60px;
+  // }
+>>>>>>> main
 }
 
 .footer-bottom {
