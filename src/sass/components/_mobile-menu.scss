@@ -55,20 +55,13 @@
   padding-left: 43px;
   padding-right: 43px;
   border-radius: 22px;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
   color: var(--header-color);
-  background-color: #fff;
+  background-color: var(--basic-white);
+  @include font(700, 16px, 1.31, null);
 }
 
 .mob-menu__span {
   margin-left: 10px;
-}
-
-.mob-menu__list {
-  list-style: none;
 }
 
 .mob-menu__item {
@@ -84,16 +77,9 @@
   padding-top: 12px;
   padding-bottom: 12px;
   height: 100%;
-  text-decoration: none;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
-  color: #fff;
-  &:hover,
-  &:focus {
-    color: var(--header-color);
-  }
+  color: var(--basic-white);
+  @include font(700, 14px, 1.28, null);
+  @include hoverFocusColor(var(--header-color));
 }
 
 .no-scroll {

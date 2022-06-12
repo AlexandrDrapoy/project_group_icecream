@@ -1,21 +1,65 @@
+.container {
+  @include mobile {
+    padding-top: 20px;
+  }
+
+  @include tablet {
+    padding-top: 40px;
+  }
+
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+
 .hidden {
   display: none;
 }
 
 .advantages {
-  background-color: #fff5f6;
+  @include mobile {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+  background-color: var(--common-bg-color);
+
   &__list {
-    @media screen and (min-width: 768px) {
+    @include tablet {
       display: flex;
       width: 527px;
     }
+
+    @include desktop {
+      display: flex;
+      width: 1141px;
+    }
   }
   &__item {
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      width: 230px;
+    @include mobile {
+      @media screen and (max-width: 767px) {
+        width: 230px;
 
-      &:not(:last-child) {
-        margin-bottom: 32px;
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    @include tablet {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      &--item1 {
+        margin-right: 142px;
+      }
+      &--item2 {
+        margin-right: 109px;
       }
     }
   }
@@ -35,15 +79,15 @@
       background-image: url(../images/mobile/advantages/advantages1.png);
       width: 33px;
 
-      @media screen and (min-width: 320px) and (max-width: 767px) {
+      @include mobile {
         margin-bottom: 16px;
       }
 
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include tablet {
         margin-bottom: 36px;
       }
 
-      @media screen and (min-width: 1200px) {
+      @include desktop {
         margin-bottom: 40px;
       }
     }
@@ -52,15 +96,15 @@
       background-image: url(../images/mobile/advantages/advantages2.png);
       width: 50px;
 
-      @media screen and (min-width: 320px) and (max-width: 767px) {
+      @include mobile {
         margin-bottom: 16px;
       }
 
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include tablet {
         margin-bottom: 36px;
       }
 
-      @media screen and (min-width: 1200px) {
+      @include desktop {
         margin-bottom: 40px;
       }
     }
@@ -69,58 +113,49 @@
       background-image: url(../images/mobile/advantages/advantages3.png);
       width: 44px;
 
-      @media screen and (min-width: 320px) and (max-width: 767px) {
+      @include mobile {
         margin-bottom: 16px;
       }
 
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include tablet {
         margin-bottom: 36px;
       }
 
-      @media screen and (min-width: 1200px) {
+      @include desktop {
         margin-bottom: 40px;
       }
     }
 
-    font-family: 'Titan One', cursive;
-    font-weight: 400;
-    line-height: 1.145;
-    letter-spacing: 0.04;
-
+    font-family: 'Titan One', sans-serif;
     color: var(--header-color);
 
-    @media screen and (min-width: 320px) and (max-width: 767px) {
+    @include mobile {
       margin-bottom: 16px;
-
-      font-size: 36px;
+      @include font(400, 36px, 1.145, 0.04);
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet {
       margin-bottom: 13px;
-
-      font-size: 48px;
+      @include font(400, 48px, 1.145, 0.04);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-bottom: 16px;
-
-      font-size: 58px;
+      @include font(400, 58px, 1.145, 0.04);
     }
   }
 
   &__subtitle {
-    font-weight: 700;
-
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      font-size: 12px;
+    @include mobile {
+      @include font(700, 12, 1.7, null);
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      font-size: 14px;
+    @include tablet {
+      @include font(700, 14, 1.7, null);
     }
 
-    @media screen and (min-width: 1200px) {
-      font-size: 16px;
+    @include desktop {
+      @include font(700, 16, 1.76, 0.02);
     }
   }
 }
