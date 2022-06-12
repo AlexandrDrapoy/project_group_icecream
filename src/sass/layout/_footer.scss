@@ -2,6 +2,30 @@
   background: #fff5f6;
 }
 
+<<<<<<< HEAD
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include tablet {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+=======
+>>>>>>> main
 .footer__title-wrap {
   text-align: left;
 
@@ -10,9 +34,10 @@
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 340px;
+    padding-bottom: 40px;
   }
   @include desktop {
-    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
@@ -27,6 +52,16 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 16px;
+  }
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
   }
   @media screen and (max-width: 1199px) {
     margin-bottom: 12px;
@@ -63,10 +98,22 @@
   justify-content: right;
   margin-top: 40px;
   margin-bottom: 40px;
-  list-style: none;
+  @include tablet {
+    margin-top: 0px;
+  }
+  @include desktop {
+    padding-top: 12px;
+  }
 }
 .soc-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 28px;
+
+  @include tablet {
+    margin-right: 30px;
+  }
+  @include desktop {
+    margin-right: 25px;
+  }
 }
 
 .soc-list__icon {
@@ -74,7 +121,7 @@
   width: 32px;
   height: 32px;
 
-  @media screen and (min-width: 768px) {
+  @mixin tablet {
     width: 34px;
     height: 34px;
   }
@@ -85,8 +132,13 @@
 }
 
 .footer__contacts-wrap {
+  padding-bottom: 40px;
+
   @include tablet {
-    // padding-bottom: 120px;
+    padding-bottom: 120px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
   }
 }
 
@@ -102,6 +154,16 @@
   line-height: 1.83;
   text-align: right;
   color: var(--primary-text);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.02em;
+  }
 }
 
 .contact-tel__link {
@@ -111,28 +173,31 @@
   font-size: 12px;
   line-height: 1.83;
   text-align: right;
-  text-decoration: none;
   color: var(--primary-text);
 
   &:hover,
   &:focus {
     color: var(--header-color);
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 14px;
+    line-height: 1.86;
+  }
+  @include desktop {
+    font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.02em;
   }
 }
 
 .footer-top {
   justify-content: space-between;
 
-  @media screen and (max-width: 767px) {
-  }
   @include tablet {
     display: flex;
-    flex-direction: column;
   }
+<<<<<<< HEAD
+=======
 
   @media screen and (max-width: 1199px) {
     // padding-bottom: 40px;
@@ -142,6 +207,7 @@
 
   //   // padding-bottom: 60px;
   // }
+>>>>>>> main
 }
 
 .footer-bottom {
@@ -166,14 +232,13 @@
   font-size: 14px;
   line-height: 1.5;
   color: var(--secondary-text);
-  align-items: center;
-  display: inline-block;
+  margin: auto;
 
   @media screen and (max-width: 767px) {
     max-width: 140px;
   }
-  @media screen and (min-width: 768px) {
-    line-height: 1.88;
+  @include tablet {
+    line-height: 1.86;
     letter-spacing: 0.02em;
   }
 }
