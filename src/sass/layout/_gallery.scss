@@ -18,11 +18,7 @@
   }
 }
 .gallery {
-  background-image: linear-gradient(
-    to bottom,
-    var(--third-bg-color) 45%,
-    var(--basic-white) 45%
-  );
+  background-image: linear-gradient(to bottom, #fff5f6 50%, #ffffff 50%);
 
   &__item-1 {
     grid-column: 1;
