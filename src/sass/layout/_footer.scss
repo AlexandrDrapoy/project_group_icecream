@@ -1,10 +1,6 @@
 .footer {
   background: #fff5f6;
 }
-.container__footer {
-  max-width: 100%;
-  margin: 0 auto;
-}
 
 .footer__title-wrap {
   text-align: left;
@@ -14,10 +10,9 @@
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     max-width: 340px;
-    padding-bottom: 40px;
   }
   @include desktop {
-    padding-bottom: 60px;
+    padding-top: 120px;
   }
 }
 
@@ -32,16 +27,6 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 16px;
-  }
-
-  @include tablet {
-    font-size: 26px;
-    line-height: 1.15;
-    letter-spacing: 0.04em;
-  }
-  @include desktop {
-    font-size: 30px;
-    line-height: 1.13;
   }
   @media screen and (max-width: 1199px) {
     margin-bottom: 12px;
@@ -78,22 +63,10 @@
   justify-content: right;
   margin-top: 40px;
   margin-bottom: 40px;
-  @include tablet {
-    margin-top: 0px;
-  }
-  @include desktop {
-    padding-top: 12px;
-  }
+  list-style: none;
 }
 .soc-list__item:not(:last-child) {
-  margin-right: 28px;
-
-  @include tablet {
-    margin-right: 30px;
-  }
-  @include desktop {
-    margin-right: 25px;
-  }
+  margin-right: 30px;
 }
 
 .soc-list__icon {
@@ -101,7 +74,7 @@
   width: 32px;
   height: 32px;
 
-  @mixin tablet {
+  @media screen and (min-width: 768px) {
     width: 34px;
     height: 34px;
   }
@@ -112,13 +85,8 @@
 }
 
 .footer__contacts-wrap {
-  padding-bottom: 40px;
-
   @include tablet {
-    padding-bottom: 120px;
-  }
-  @include desktop {
-    padding-bottom: 60px;
+    // padding-bottom: 120px;
   }
 }
 
@@ -134,16 +102,6 @@
   line-height: 1.83;
   text-align: right;
   color: var(--primary-text);
-
-  @include tablet {
-    font-size: 14px;
-    line-height: 1.86;
-  }
-  @include desktop {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.02em;
-  }
 }
 
 .contact-tel__link {
@@ -153,29 +111,36 @@
   font-size: 12px;
   line-height: 1.83;
   text-align: right;
+  text-decoration: none;
   color: var(--primary-text);
 
   &:hover,
   &:focus {
     color: var(--header-color);
   }
-  @include tablet {
+  @media screen and (min-width: 768px) {
     font-size: 14px;
-    line-height: 1.86;
-  }
-  @include desktop {
-    font-size: 16px;
     line-height: 1.88;
-    letter-spacing: 0.02em;
   }
 }
 
 .footer-top {
   justify-content: space-between;
 
+  @media screen and (max-width: 767px) {
+  }
   @include tablet {
     display: flex;
+    flex-direction: column;
   }
+
+  @media screen and (max-width: 1199px) {
+    // padding-bottom: 40px;
+  }
+  // @media screen and (min-width: 1200px) {
+  //   // display: inline;
+
+  // }
 }
 
 .footer-bottom {
@@ -200,13 +165,14 @@
   font-size: 14px;
   line-height: 1.5;
   color: var(--secondary-text);
-  margin: auto;
+  align-items: center;
+  display: inline-block;
 
   @media screen and (max-width: 767px) {
     max-width: 140px;
   }
-  @include tablet {
-    line-height: 1.86;
+  @media screen and (min-width: 768px) {
+    line-height: 1.88;
     letter-spacing: 0.02em;
   }
 }
