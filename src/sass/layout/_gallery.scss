@@ -18,16 +18,20 @@
   }
 }
 .gallery {
-  background-color: linear-gradient(
-    to button,
-    var(--third-bg-color) 40%,
-    #e5e5e5 40%,
-    #e5e5e5 100%
+  background-image: linear-gradient(
+    to bottom,
+    var(--third-bg-color) 45%,
+    var(--basic-white) 45%
   );
 
   &__item-1 {
     grid-column: 1;
     grid-row: 7 / span 5;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
   }
   &__item-2 {
     grid-column: 2;
@@ -64,5 +68,12 @@
   &__item-10 {
     grid-column: 7;
     grid-row: 7 / span 5;
+  }
+  &__item-animation {
+    transition: transform $transition;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
   }
 }
