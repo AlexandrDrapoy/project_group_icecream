@@ -14,7 +14,7 @@
     height: 664px;
   }
 }
-
+.header__container{ padding-top: 0;}
 .header__nav {
   display: flex;
   align-items: center;
@@ -51,12 +51,15 @@
 }
 
 .burger {
-  width: 20px;
-  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
   margin: 0;
   padding: 0;
-  background-color: var(--header-color);
-  border: none;
+  background-color: transparent;
+  z-index: 5;
 
   @media screen and (min-width: 768px) {
     margin-right: 32px;
@@ -64,6 +67,10 @@
   @media screen and (min-width: 1200px) {
     display: none;
   }
+}
+
+.burger__icon {
+  fill: var(--header-color);
 }
 
 .nav__button {
@@ -195,20 +202,24 @@
 .hero-circle {
   position: absolute;
   top: 83px;
-  left: 36px;
+  left: 12%;
   width: 344px;
   height: 344px;
   background-color: var(--main-color);
   border-radius: 50%;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include tablet {
     top: 43px;
-    left: 248px;
+    left: 32%;
     width: 333px;
     height: 333px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     top: 54px;
-    left: 500px;
+    left: 43%;
     width: 534px;
     height: 534px;
   }
@@ -216,19 +227,20 @@
 
 .hero-image {
   position: absolute;
-  top: 92px;
-  left: 117px;
+  top: 9px;
+  left: 81px;
   width: 171px;
   height: 410px;
-  @media screen and (min-width: 768px) {
-    top: 80px;
-    left: 332px;
+
+  @include tablet {
+    top: 37px;
+    left: 74px;
     width: 143px;
     height: 336px;
   }
-  @media screen and (min-width: 1200px) {
-    top: 108px;
-    left: 626px;
+  @include desktop {
+    top: 54px;
+    left: 119px;
     width: 236px;
     height: 557px;
   }
