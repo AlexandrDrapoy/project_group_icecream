@@ -23,9 +23,7 @@
 
 .footer__small-title {
   font-family: var(--font-family-second);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.17;
+  @include font(400, 18px, 1.17, null);
   text-transform: uppercase;
   color: var(--main-color);
 
@@ -167,9 +165,7 @@
 }
 
 .footer-legal--text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
+  @include font(700, 14px, 1.15, null);
   color: var(--secondary-text);
   margin: auto;
 
