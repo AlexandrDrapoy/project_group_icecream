@@ -3,6 +3,12 @@
 @import './utils/var';
 @import './utils/placeholder';
 @import './utils/mixin';
+@import './components/mobile-menu';
+@import './components/products';
+@import './components/container';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/order-form';
 @import './layout/hero-header';
 @import './layout/products';
 @import './layout/about';
@@ -11,5 +17,3 @@
 @import './layout/cusromer_reviews';
 @import './layout/contact';
 @import './layout/footer';
-@import './components/mobile-menu';
-@import './components/container';

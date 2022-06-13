@@ -1,26 +1,9 @@
 .footer {
-  background: #fff5f6;
+  background: var(--common-bg-color);
 }
-
-.container {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+.container__footer {
+  max-width: 100%;
   margin: 0 auto;
-
-  @media screen and (min-width: 320px) {
-    max-width: 320px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 .footer__title-wrap {
@@ -30,60 +13,51 @@
     max-width: 234px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    // padding-bottom: 40px;
     max-width: 340px;
+    padding-bottom: 40px;
   }
-  @media screen and (min-width: 1200px) {
-    // display: inline;
-    // width: 1200px;
-    padding-top: 120px;
-    // padding-bottom: 60px;
+  @include desktop {
+    padding-bottom: 60px;
   }
 }
 
 .footer__small-title {
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.17;
+  font-family: var(--font-family-second);
+  @include font(400, 18px, 1.17, null);
   text-transform: uppercase;
-  color: #ffa5ba;
+  color: var(--main-color);
 
-  @media screen and (max-width: 797px) {
-    // margin-top: 48px;
+  @media screen and (max-width: 767px) {
     margin-bottom: 16px;
   }
+
+  @include tablet {
+    @include font(400, 26px, 1.15, 0.04em);
+  }
+  @include desktop {
+    @include font(400, 30px, 1.13, 0.04em);
+  }
   @media screen and (max-width: 1199px) {
-    // margin-top: 40px;
     margin-bottom: 12px;
   }
-  @media screen and (min-width: 1200px) {
-    // display: inline;
-    // width: 1200px;
-    // margin-top: 120px;
+  @include desktop {
     margin-bottom: 16px;
   }
 }
 
 .footer__big-title {
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #d41443;
+  font-family: var(--font-family-second);
 
-  @media screen and (min-width: 768px) {
-    font-size: 48px;
-    letter-spacing: 0.06em;
+  @include font(400, 34px, 1.15, 0.04em);
+  text-transform: uppercase;
+  color: var(--header-color);
+
+  @include tablet {
+    @include font(400, 48px, 1.15, 0.06em);
   }
-  @media screen and (min-width: 1200px) {
-    font-size: 58px;
-    line-height: 1.14;
-    letter-spacing: 0.06em;
+
+  @include desktop {
+    @include font(400, 58px, 1.14, 0.06em);
   }
 }
 
@@ -92,84 +66,91 @@
   justify-content: right;
   margin-top: 40px;
   margin-bottom: 40px;
-  list-style: none;
+  @include tablet {
+    margin-top: 0px;
+  }
+  @include desktop {
+    padding-top: 12px;
+  }
 }
 .soc-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 28px;
+
+  @include tablet {
+    margin-right: 30px;
+  }
+  @include desktop {
+    margin-right: 25px;
+  }
 }
 
 .soc-list__icon {
-  fill: #fea5bb;
+  fill: var(--icon-color);
   width: 32px;
   height: 32px;
 
+  @mixin tablet {
+    width: 34px;
+    height: 34px;
+  }
   &:hover,
   &:focus {
-    fill: #d41443;
+    fill: var(--header-color);
+    transition: fill $transition;
   }
 }
 
 .footer__contacts-wrap {
-  @media screen and (min-width: 768px) {
-    // padding-bottom: 120px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
   }
 }
 
 .footer__contact-tel {
-  margin-bottom: 40px;
   text-align: right;
 }
 
 .footer__contact-text {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.83;
+  @include font(700, 12px, 1.83, 0.02em);
   text-align: right;
-  color: #000000;
+  color: var(--primary-text);
+
+  @include tablet {
+    @include font(700, 14px, 1.86, 0.02em);
+  }
+  @include desktop {
+    @include font(700, 16px, 1.88, 0.02em);
+  }
 }
 
 .contact-tel__link {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.83;
+  @include font(700, 12px, 1.83, 0.02em);
   text-align: right;
-  text-decoration: none;
-  color: #000000;
+  color: var(--header-color);
 
-  &:hover,
-  &:focus {
-    color: #d41443;
+  @include tablet {
+    @include font(700, 14px, 1.86, 0.02em);
+  }
+  @include desktop {
+    @include font(700, 16px, 1.88, 0.02em);
   }
 }
 
 .footer-top {
   justify-content: space-between;
 
-  @media screen and (max-width: 767px) {
-    padding-top: 48px;
-  }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
   }
-
-  @media screen and (max-width: 1199px) {
-    padding-top: 40px;
-    // padding-bottom: 40px;
-  }
-  // @media screen and (min-width: 1200px) {
-  //   // display: inline;
-  //   // width: 1200px;
-  //   padding-top: 120px;
-  //   // padding-bottom: 60px;
-  // }
 }
 
 .footer-bottom {
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--border-color);
   text-align: center;
   width: 100%;
   height: 100%;
@@ -177,22 +158,21 @@
     padding-top: 16px;
     padding-bottom: 20px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-top: 8px;
     padding-bottom: 8px;
   }
 }
 
 .footer-legal--text {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #907e82;
-  align-items: center;
-  display: inline-block;
+  @include font(700, 14px, 1.15, null);
+  color: var(--secondary-text);
+  margin: auto;
+
   @media screen and (max-width: 767px) {
     max-width: 140px;
+  }
+  @include tablet {
+    @include font(700, 14px, 1.86, 0.02em);
   }
 }

@@ -1,4 +1,4 @@
-<section class="customer">
+<section class="customer" id="customer-reviews">
     <h2 class="customer__title visually-hidden">Customer Reviews</h2>
     <div class="customer__slider">
         <div class="customer__reviews">
@@ -42,37 +42,18 @@
     <div class="customer__dots--container">
         <span class="customer__dot"></span>
     </div>
-    <!-- <div class="imagesnew_dotted">
-        <img class="active" src="./images/customer-rewiews/frame-home.svg" width="12">
-        <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
-        <img src="./images/customer-rewiews/ellipse-dots.svg" width="12">
-    </div> -->
 </section>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<!-- <script type="text/javascript">
-    $('.customer__slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-    });
-</script> --> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.customer__slider').slick({
             arrows: false,
             dots: true,
-            // dotsClass: "my-dots",
+            autoplay: true,
+            autoplaySpeed: 10000,
+            infinite: true,
         });
     });
 </script>
-<!-- <script>
-     $('.imagesnew_dotted').slick({
-            slidesToShow: 3,
-            asNavFor: '.images',
-            focusOnSelect: true,
-        });
-</script> -->

@@ -1,66 +1,116 @@
 .container--contacts {
-  @include tablet;
-  padding-left: 18px;
-  padding-right: 18px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile {
+    width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @include tablet {
+    width: 768px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @include desktop {
+    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .contacts {
-  padding-top: 48px;
+  padding-top: 24px;
   padding-bottom: 48px;
   background-image: linear-gradient(
     to bottom,
-    #fffbfd 10%,
+    #fff 0%,
     #fffbfd 26%,
     #fff5f6 26%
   );
-}
 
-.hidden-title {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  margin: -1px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
 }
 
 .card-set__item {
-  background-color: #fff;
+  background-color: var(--basic-white);
   padding: 40px 32px;
   border-radius: 24px;
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
   transition: box-shadow $transition;
+  @include desktop {
+    // width: calc(100% / 3 - 32px);
+    padding: 40px 40px;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
 
   &:hover,
   &focus {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
   & + & {
-    margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
   }
 }
-
+.card-set {
+  @include tablet {
+    display: flex;
+  }
+}
 .card-set__agency {
   @include centerFlex;
   @include font_(1.83, 0.04em, 12px);
-  color: #fff;
+  color: var(--basic-white);
   width: 80px;
   height: 16px;
   border-radius: 4px;
   background-color: #f0d1a5;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @include tablet {
+    width: 73px;
+    height: 28px;
+    @include font_(1.88, 0.04em, 16px);
+  }
+  @include desktop {
+    width: 75px;
+  }
 }
 .card-set__agency-color {
   @include centerFlex;
   @include font_(1.83, 0.04em, 12px);
-  color: #fff;
+  color: var(--basic-white);
   width: 130px;
   height: 16px;
   border-radius: 4px;
   background-color: #c2e297;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @include tablet {
+    width: 138px;
+    height: 28px;
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 
 .card-set__location {
@@ -82,11 +132,25 @@
   margin-bottom: 8px;
   @include font_(1.83, 0.04em, 12px);
   color: var(--primary-text);
+
+  @include tablet {
+    @include font_(1.86, 0.04em, 14px);
+  }
+  @include desktop {
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 
 .card-set__text {
   @include font_(1.5, null, 12px);
   color: var(--secondary-text);
+
+  @include tablet {
+    @include font_(1.64, null, 14px);
+  }
+  @include desktop {
+    @include font_(1.81, 0.04em, 16px);
+  }
 }
 
 .card-set__working {
@@ -111,24 +175,56 @@
 .card-set__working-weekdays {
   @include font_(1.83, null, 12px);
   color: var(--primary-text);
+
+  @include tablet {
+    @include font_(1.86, null, 14px);
+  }
+  @include desktop {
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 
 .card-set__working-time {
   @include font_(1.83, null, 12px);
   color: var(--main-color);
+
+  @include tablet {
+    @include font_(1.86, null, 14px);
+  }
+
+  @include desktop {
+    @include font_(1.88, 0.04em, 16px);
+  }
 }
 
 .card-set__mail,
 .card-set__tel {
   @include font_(1.5, null, 12px);
   color: var(--secondary-text);
+
+  @include tablet {
+    @include font_(1.86, null, 14px);
+  }
+  @include desktop {
+    @include font_(1.81, null, 16px);
+  }
 }
 
 .contacts-buttons {
   margin-top: 32px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include tablet {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+  }
 
   &__locations {
     cursor: pointer;
@@ -139,7 +235,16 @@
     border-radius: 22px;
     margin-bottom: 10px;
     @include font_(1.31, null, 16px, 700);
-    color: #ffffff;
+    color: var(--basic-white);
+
+    @include tablet {
+      margin-right: 15px;
+      width: 192px;
+    }
+
+    @include desktop {
+      width: 198px;
+    }
   }
 
   &__franchise {
@@ -147,19 +252,34 @@
     width: 161px;
     height: 44px;
     border: none;
-    background: #fff;
+    background: var(--basic-white);
     border-radius: 22px;
     @include font_(1.31, null, 16px, 700);
     color: var(--header-color);
     transition: background-color $transition;
 
+    @include tablet {
+      width: 174px;
+    }
+    @include desktop {
+      width: 180px;
+    }
+
     &:hover,
     &:focus {
-      background-color: #ecebeb;
+      background-color: var(--secondary-accent-btn);
     }
   }
 
   &__arrow {
     margin-left: 8px;
+
+    @include tablet {
+      margin-left: 13px;
+    }
+
+    @include desktop {
+      margin-left: 14px;
+    }
   }
 }
