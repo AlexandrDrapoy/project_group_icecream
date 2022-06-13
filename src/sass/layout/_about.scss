@@ -1,5 +1,6 @@
 .about {
-
+    margin-left: auto;
+    margin-right: auto;
     background-repeat: no-repeat;
     background-color: #fff5f6;
     width: 100%;
@@ -16,9 +17,10 @@
         }
     }
     @media screen and (min-width: 1200px) {
+    
     background-image: url(../images/desctop/about/dbg1x.png);
     background-size: 100%;
-    background-position: 0 225px;
+    background-position: 0 255px;
     //padding-top: 79px;
     //text-align: center;
 
@@ -31,9 +33,39 @@
     }
 }
 
+.about-container{
+
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile{
+        @media (max-width: 767px) {
+            width: 320px;
+            padding-left: 20px;
+            padding-right: 20px;
+            }
+
+    }
+        @include tablet {
+            @media (max-width: 1199px){
+                width: 768px;
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+            
+        }
+    //padding: 80px 0;
+    @include desktop{
+        width: 1200px;
+        //margin-left: auto;
+        //margin-right: auto;
+    }
+}
+
 .two-titles {
     text-align: center;
     @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
         max-width: 234px;
         padding-bottom: 32px;
     }
@@ -43,7 +75,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-        padding-bottom: 79px;
+        padding-bottom: 60px;
     }
 }
 
@@ -97,26 +129,40 @@
 }
 
 .general-box{
-    display: flex;
+    
     @include tablet{
     justify-content: space-between;
+    display: flex;
     }
     @include desktop{
         justify-content: space-between;
+        display: flex;
+        width: 1200px;
+    }
+}
+
+.about-top-text{
+    @include desktop {
+        width: 463px;
+        margin-right: 0;
     }
 }
 
 .image-cow {
-    display: inline;
+    display: inline-block;
     width: 280px;
     margin-left: auto;
     margin-right: auto;
     @include tablet {
     width: 336px;
+    margin-right: 32px;
 }
     @include desktop {
     width: 501px;
     display: block;
+    margin-right: 139px;
+    //margin-left: 14px;
+
     //align-items: center;
 }
 }
@@ -130,7 +176,9 @@
     }
     @include desktop {
         width: 463px;
-        //margin-top: 30px;
+        align-items: center;
+        flex-grow: 1;
+        padding-top: 71px;
         //margin-right: 150px;
     }
 }
@@ -145,12 +193,19 @@
         line-height: 1.76;
     }
     @media screen and (min-width: 1200px) {
-        display: inline;
+        
         font-size: 16px;
         line-height: 1.76;
         letter-spacing: 0.04em;
 
     }
+}
+
+.about-list{
+    @include desktop{
+        width: 463px;
+        margin-right: 0;
+    };
 }
 
 .middle-text, 
@@ -159,14 +214,14 @@
     @media screen and (max-width: 767px) {
         font-size: 12px;
         line-height: 1.62;
-        padding-top: 32px;
+        padding-top: 25px;
     }
         
     @media screen and (max-width: 1199px) {
         font-size: 14px;
         line-height: 1.76;
         letter-spacing: 0.04em;
-        padding-top: 32px;
+        padding-top: 20px;
     }
         
     @media screen and (min-width: 1200px) {
