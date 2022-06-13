@@ -90,7 +90,7 @@
   height: 32px;
   transition: fill $transition;
 
-  @mixin tablet {
+  @include tablet {
     width: 34px;
     height: 34px;
   }
