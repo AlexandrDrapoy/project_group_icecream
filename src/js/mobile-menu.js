@@ -14,14 +14,18 @@
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtnMob.addEventListener('click', toggleMenu);
+
   refs.closeMenuForLink.addEventListener('click', toggleMenu);
   refs.closeMenuForLink1.addEventListener('click', toggleMenu);
   refs.closeMenuForLink2.addEventListener('click', toggleMenu);
   refs.closeMenuForLink3.addEventListener('click', toggleMenu);
   refs.closeMenuForLink4.addEventListener('click', toggleMenu);
-
+  refs.closeMenuBtnMob.addEventListener('click', toggleMenuMod);
   function toggleMenu() {
+    refs.menu.classList.toggle('is-hidden');
+    refs.body.classList.toggle('no-scroll');
+  }
+  function toggleMenuMod() {
     refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
