@@ -4,80 +4,126 @@
     <div class="modal__decor"></div>
     <p class="modal__title">Make your order</p>
     <form class="form">
-      <div class="form__field form__field--radio">
-        <p class="form__title">Choose size:</p>
-        <label>
-          <input class="radio" type="radio" name="size" value="small" checked />
-          Small
-        </label>
-        <label>
-          <input class="radio" type="radio" name="size" value="medium" />
-          Medium
-        </label>
-        <label>
-          <input class="radio" type="radio" name="size" value="large" />
-          Large
-        </label>
-      </div>
-      <div class="form__field form__field--checkbox">
-        <p class="form__title">Choose flavor:</p>
-        <div class="form__set">
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="chocolate"
-            />
-            Chocolate
+      <div class="radiocheckbox-wrapper">
+        <div class="form__field--radio">
+          <p class="form__title">Choose size:</p>
+          <label class="radio">
+            <input type="radio" name="size" value="small" checked />
+            <span>Small</span>
           </label>
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="vanilla"
-            />
-            Vanilla
+          <label class="radio">
+            <input type="radio" name="size" value="medium" />
+            <span>Medium</span>
           </label>
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="bubblegum"
-            />
-            Bubblegum
+          <label class="radio">
+            <input type="radio" name="size" value="large" />
+            <span>Large</span>
           </label>
         </div>
-        <div class="form__set">
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="strawberry"
-            />
-            Strawberry
-          </label>
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="pistachio"
-            />
-            Pistachio
-          </label>
-          <label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              name="flavor"
-              value="cotton-candy"
-            />
-            Cotton candy
-          </label>
+        <div class="form__field--checkbox">
+          <p class="form__title">Choose flavor:</p>
+          <div class="checkbox-set">
+            <div class="checkbox-set--small">
+              <input
+                class="inp-cbx"
+                id="cbx1"
+                type="checkbox"
+                name="flavor"
+                value="chocolate"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx1"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Chocolate</span></label
+              >
+              <input
+                class="inp-cbx"
+                id="cbx2"
+                type="checkbox"
+                name="flavor"
+                value="vanilla"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx2"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Vanilla</span></label
+              >
+              <input
+                class="inp-cbx"
+                id="cbx3"
+                type="checkbox"
+                name="flavor"
+                value="bubble-gum"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx3"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Bubble gum</span></label
+              >
+            </div>
+            <div class="checkbox-set--small">
+              <input
+                class="inp-cbx"
+                id="cbx4"
+                type="checkbox"
+                name="flavor"
+                value="strawberry"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx4"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Strawberry</span></label
+              >
+              <input
+                class="inp-cbx"
+                id="cbx5"
+                type="checkbox"
+                name="flavor"
+                value="pistachio"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx5"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Pistachio</span></label
+              >
+              <input
+                class="inp-cbx"
+                id="cbx6"
+                type="checkbox"
+                name="flavor"
+                value="cotton-candy"
+                style="display: none"
+              />
+              <label class="cbx" for="cbx6"
+                ><span>
+                  <svg viewbox="0 0 14 14">
+                    <polyline
+                      points="1.5 6 4.5 9 10.5 1"
+                    ></polyline></svg></span
+                ><span>Cotton candy</span></label
+              >
+            </div>
+          </div>
         </div>
       </div>
       <div class="form__field">
