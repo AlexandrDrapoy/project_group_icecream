@@ -88,6 +88,7 @@
   fill: var(--icon-color);
   width: 32px;
   height: 32px;
+  transition: fill $transition;
 
   @mixin tablet {
     width: 34px;
@@ -96,7 +97,6 @@
   &:hover,
   &:focus {
     fill: var(--header-color);
-    transition: fill $transition;
   }
 }
 
