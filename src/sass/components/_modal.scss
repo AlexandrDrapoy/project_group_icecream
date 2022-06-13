@@ -1,6 +1,6 @@
 .modal {
   transform: scale(1);
-
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -22,6 +22,7 @@
     top: 50%;
     left: 50%;
     min-width: 480px;
+    padding-top: 0;
     transform: translate(-50%, -50%) scale(1);
   }
 
@@ -55,9 +56,13 @@
 }
 
 .modal__decor {
-  height: 110px;
-  background-image: url(/src/images/mobile/modal/modal-decor.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    height: 110px;
+    background-image: url(/src/images/mobile/modal/modal-decor.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
