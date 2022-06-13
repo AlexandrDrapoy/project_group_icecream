@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   padding-top: 8px;
   height: 502px;
   background-color: var(--header-bg-color);
@@ -14,7 +13,10 @@
     height: 664px;
   }
 }
-
+.header__container {
+  position: relative;
+  padding-top: 0;
+}
 .header__nav {
   display: flex;
   align-items: center;
@@ -48,21 +50,36 @@
 .menu__link {
   @include font(700, 16px, 1.31, null);
   color: var(--basic-white);
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: var(--header-color);
+  }
 }
 
 .burger {
-  width: 20px;
-  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
   margin: 0;
   padding: 0;
-  background-color: var(--header-color);
-  border: none;
+  background-color: transparent;
 
   @media screen and (min-width: 768px) {
     margin-right: 32px;
   }
   @media screen and (min-width: 1200px) {
     display: none;
+  }
+}
+
+.burger__icon {
+  fill: var(--header-color);
+  & > use {
+    transform: translate(5px, 5px);
   }
 }
 
@@ -195,20 +212,23 @@
 .hero-circle {
   position: absolute;
   top: 83px;
-  left: 36px;
+  left: 12%;
   width: 344px;
   height: 344px;
   background-color: var(--main-color);
   border-radius: 50%;
-  @media screen and (min-width: 768px) {
-    top: 43px;
-    left: 248px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include tablet {
+    top: 15px;
+    left: 32%;
     width: 333px;
     height: 333px;
   }
-  @media screen and (min-width: 1200px) {
-    top: 54px;
-    left: 500px;
+  @include desktop {
+    left: 40%;
     width: 534px;
     height: 534px;
   }
@@ -216,19 +236,20 @@
 
 .hero-image {
   position: absolute;
-  top: 92px;
-  left: 117px;
+  top: 9px;
+  left: 81px;
   width: 171px;
   height: 410px;
-  @media screen and (min-width: 768px) {
-    top: 80px;
-    left: 332px;
+
+  @include tablet {
+    top: 37px;
+    left: 74px;
     width: 143px;
     height: 336px;
   }
-  @media screen and (min-width: 1200px) {
-    top: 108px;
-    left: 626px;
+  @include desktop {
+    top: 54px;
+    left: 119px;
     width: 236px;
     height: 557px;
   }
@@ -299,7 +320,7 @@
   @media screen and (min-width: 768px) {
     position: absolute;
     left: 32px;
-    bottom: 16px;
+    bottom: -221px;
     display: flex;
     align-items: center;
     width: 152px;
@@ -307,7 +328,7 @@
 
     @media screen and (min-width: 1200px) {
       left: 16px;
-      bottom: 36px;
+      bottom: -276px;
       width: 213px;
       height: 216px;
     }
@@ -355,13 +376,14 @@
   display: none;
   @media screen and (min-width: 768px) {
     position: absolute;
-    bottom: 0;
+    bottom: -237px;
     right: 32px;
     display: block;
     width: 190px;
     height: 150px;
   }
   @media screen and (min-width: 1200px) {
+    bottom: -336px;
     right: 16px;
     width: 304px;
     height: 241px;
