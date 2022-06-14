@@ -1,7 +1,7 @@
 .footer {
   background: var(--common-bg-color);
 }
-.container__footer {
+.footer-container {
   max-width: 100%;
   margin: 0 auto;
 }
@@ -90,7 +90,7 @@
   height: 32px;
   transition: fill $transition;
 
-  @mixin tablet {
+  @include tablet {
     width: 34px;
     height: 34px;
   }
@@ -128,7 +128,7 @@
   }
 }
 
-.contact-tel__link {
+.footer__contact-tel-link {
   @include font(700, 12px, 1.83, 0.02em);
   text-align: right;
   color: var(--header-color);
@@ -164,7 +164,7 @@
   }
 }
 
-.footer-legal--text {
+.footer-bottom__legal-text {
   @include font(700, 14px, 1.15, null);
   color: var(--secondary-text);
   margin: auto;
