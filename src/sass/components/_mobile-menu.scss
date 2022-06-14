@@ -48,7 +48,7 @@
   background-color: transparent;
 }
 
-.close-btn__icon {
+.close-menu-btn__icon {
   fill: #fff;
 }
 
@@ -90,13 +90,11 @@
   padding-bottom: 12px;
   height: 100%;
   color: var(--basic-white);
+  transition: color $transition;
   @include font(700, 14px, 1.28, null);
   @include hoverFocusColor(var(--header-color));
 }
 
 .no-scroll {
   overflow: hidden;
-  @include tablet {
-    overflow: visible;
-  }
 }

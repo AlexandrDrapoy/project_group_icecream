@@ -5,6 +5,8 @@
     background-color: #fff5f6;
     width: 100%;
     @media screen and (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 20px;
         background-image: url(../images/mobile/about/mbg1x.png);
         background-size: 100%;
         background-position: 0 550px;
@@ -16,8 +18,13 @@
             background-image: url(../images/mobile/about/mbg2x.png);
         }
     }
+    @media screen and (min-width: 768px){
+    padding-top: 20px;
+    padding-bottom: 40px;    
+    }
     @media screen and (min-width: 1200px) {
-    
+    padding-top: 60px;
+    padding-bottom: 0;
     background-image: url(../images/desctop/about/dbg1x.png);
     background-size: 100%;
     background-position: 0 255px;
@@ -135,9 +142,10 @@
     display: flex;
     }
     @include desktop{
+        padding-bottom: 25px;
         justify-content: space-between;
         display: flex;
-        width: 1200px;
+        //width: 1200px;
     }
 }
 
@@ -245,6 +253,7 @@
     background: #ffffff;
     border-radius: 22px;
     margin-top: 40px;
+    //margin-bottom: 90px;
     cursor: pointer;
     transition: background-color $transition;
 
