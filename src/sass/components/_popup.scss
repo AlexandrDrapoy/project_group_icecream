@@ -1,0 +1,37 @@
+.pop_up {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.pop_up.active {
+  display: block;
+}
+
+.pop_up_container {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.pop_up_body {
+  position: relative;
+  margin: auto;
+  background-color: var(--basic-white);
+}
+
+.pop_up_close {
+  position: absolute;
+  top: -5;
+  right: -5;
+}
