@@ -1,0 +1,35 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--common-bg-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--common-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, var(--header-color)),
+    color-stop(0.72, var(--header-color)),
+    color-stop(0.86, var(--header-color))
+  );
+  transition: background-image $transition;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, var(--accent-btn)),
+    color-stop(0.72, var(--accent-btn)),
+    color-stop(0.86, var(--accent-btn))
+  );
+}
