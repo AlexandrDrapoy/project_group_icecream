@@ -47,7 +47,6 @@
     }
   }
 }
-
 .menu__link {
   @include font(700, 16px, 1.31, null);
   color: var(--basic-white);
@@ -58,7 +57,6 @@
     color: var(--header-color);
   }
 }
-
 .burger {
   display: flex;
   justify-content: center;
