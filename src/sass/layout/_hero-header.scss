@@ -355,11 +355,10 @@
 .arrow-btn {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 18px;
   height: 18px;
 
-  @include font(700, 8px, 1.25, null);
+  @include font(700, 24px, 1.4, null);
   color: var(--header-color);
   background-color: var(--basic-white);
   border: none;
@@ -369,7 +368,7 @@
   @media screen and (min-width: 1200px) {
     width: 26px;
     height: 26px;
-    @include font(700, 14px, 1.4, null);
+    @include font(700, 35px, 1.4, null);
   }
 }
 
