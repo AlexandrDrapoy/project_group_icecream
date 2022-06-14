@@ -3,8 +3,6 @@
   background-color: var(--basic-white);
   padding-top: 80px;
   padding-bottom: 40px;
-  // padding-right: 20px;
-  // padding-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,6 +65,8 @@
   .products__title-main {
     font-size: 48px;
     line-height: 1.15;
+    margin-top: 18px;
+    margin-bottom: 0;
   }
 }
 
@@ -74,7 +74,8 @@
   .products__title-main {
     font-size: 58px;
     line-height: 1.13;
-    padding-bottom: 63px;
+    padding-bottom: 100px;
+    margin-top: 16px;
   }
 }
 
@@ -89,7 +90,6 @@
   color: var(--basic-white);
   text-align: center;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   position: relative;
 }
 
@@ -130,7 +130,7 @@
   justify-content: center;
   color: var(--basic-white);
 
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(50%);
 }
 
 .products__item-text {
@@ -179,9 +179,11 @@
   width: 280px;
   height: 280px;
   top: 0;
-  // left: 0;
 
-  background-image: url(.././images/mobile/products/home-pic1-mob.png);
+  background-image: image-set(
+    url(.././images/mobile/products/home-pic1-mob.png) 1x,
+    url(.././images/mobile/products/home-pic1-mob-2x.png) 2x
+  );
 
   transform: translateX(-50%) translateY(-50%);
 }
@@ -191,7 +193,10 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(.././images/tablet/products/home-pic1-tablet.png);
+    background-image: image-set(
+      url(.././images/tablet/products/home-pic1-tablet.png) 1x,
+      url(.././images/tablet/products/home-pic1-tablet-2x.png) 2x
+    );
 
     transform: translateX(-50%);
   }
@@ -202,7 +207,10 @@
     width: 394px;
     height: 394px;
 
-    background-image: url(.././images/desctop/products/home-pic1-desctop.png);
+    background-image: image-set(
+      url(.././images/desctop/products/home-pic1-desctop.png) 1x,
+      url(.././images/desctop/products/home-pic1-desctop-2x.png) 2x
+    );
 
     transform: translateX(-50%) translateY(-25%);
   }
@@ -241,8 +249,10 @@
   width: 280px;
   height: 280px;
   top: 0;
-  // left: 0;
-  background-image: url(.././images/mobile/products/home-pic2-mob.png);
+  background-image: image-set(
+    url(.././images/mobile/products/home-pic2-mob.png) 1x,
+    url(.././images/mobile/products/home-pic2-mob-2x.png) 2x
+  );
 
   transform: translateX(-50%) translateY(-50%);
 }
@@ -252,7 +262,10 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(.././images/tablet/products/home-pic2-tablet.png);
+    background-image: image-set(
+      url(.././images/tablet/products/home-pic2-tablet.png) 1x,
+      url(.././images/tablet/products/home-pic2-tablet-2x.png) 2x
+    );
 
     transform: translateX(-50%);
   }
@@ -263,7 +276,10 @@
     width: 394px;
     height: 394px;
 
-    background-image: url(.././images/desctop/products/home-pic2-desctop.png);
+    background-image: image-set(
+      url(.././images/desctop/products/home-pic2-desctop.png) 1x,
+      url(.././images/desctop/products/home-pic2-desctop-2x.png) 2x
+    );
 
     transform: translateX(-50%) translateY(-25%);
   }
@@ -302,8 +318,10 @@
   width: 280px;
   height: 280px;
   top: 0;
-  // left: 0;
-  background-image: url(.././images/mobile/products/home-pic3-mob.png);
+  background-image: image-set(
+    url(.././images/mobile/products/home-pic3-mob.png) 1x,
+    url(.././images/mobile/products/home-pic3-mob-2x.png) 2x
+  );
 
   transform: translateX(-50%) translateY(-50%);
 }
@@ -313,7 +331,10 @@
     width: 224px;
     height: 224px;
 
-    background-image: url(.././images/tablet/products/home-pic3-tablet.png);
+    background-image: image-set(
+      url(.././images/tablet/products/home-pic3-tablet.png) 1x,
+      url(.././images/tablet/products/home-pic3-tablet-2x.png) 2x
+    );
 
     transform: translateX(-50%);
   }
@@ -324,7 +345,10 @@
     width: 394px;
     height: 394px;
 
-    background-image: url(.././images/desctop/products/home-pic3-desctop.png);
+    background-image: image-set(
+      url(.././images/desctop/products/home-pic3-desctop.png) 1x,
+      url(.././images/desctop/products/home-pic3-desctop-2x.png) 2x
+    );
 
     transform: translateX(-50%) translateY(-25%);
   }
