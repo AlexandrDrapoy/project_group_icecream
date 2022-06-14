@@ -27,7 +27,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-    min-width: 600px;
+    min-width: 540px;
+    max-height: 100vh;
   }
 
   .backdrop--is-hidden & {
@@ -59,7 +60,7 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
-    height: 110px;
+    height: 75px;
     background-image: url(/src/images/mobile/modal/modal-decor.png);
     background-size: cover;
     background-position: center;
