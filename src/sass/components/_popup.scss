@@ -1,5 +1,7 @@
 .pop-up {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -9,7 +11,8 @@
   z-index: 2;
 
   &.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 
   &__container {
@@ -25,7 +28,7 @@
 
   &__body {
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: relative;
     margin: auto;
     background-color: var(--basic-white);
@@ -33,7 +36,7 @@
 
   &__frame {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   &__close {
