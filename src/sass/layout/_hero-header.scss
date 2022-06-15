@@ -353,8 +353,10 @@
 .arrow-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 18px;
   height: 18px;
+  padding: 0;
 
   @include font(700, 24px, 1.4, null);
   color: var(--header-color);
